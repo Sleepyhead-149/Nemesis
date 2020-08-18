@@ -1,0 +1,22 @@
+
+    if keys[py.K_RIGHT]:
+        walkright = True
+        walkleft = False
+        x += 8
+
+        Win.blit(dino_run[i%2], (x,140))
+
+        i += 1
+    elif keys[py.K_LEFT]:
+        walkright = False
+        walkleft = True
+        x -= 8
+
+        Win.blit(dino_run[i % 2], (x, 140))
+
+        i += 1
+    else:
+        walkleft = False
+        walkright = False
+    if walkright == False and walkleft == False:
+        Win.blit(dino_s,(x,140))
